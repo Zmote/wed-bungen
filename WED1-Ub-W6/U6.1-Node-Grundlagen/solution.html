@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Node JS</title>
+
+    <link rel="stylesheet" type="text/css" href="../../resources/documentStyle.css">
+  </head>
+  <body>
+    <h1>
+        <a class="backlink" href="../WED1-FS2015-U6-Node.html">⇦</a>
+        Node Basics Übung
+    </h1>
+
+    <h2>Installation</h2>
+    <p>Installieren Sie Webstorm. </p>
+	<p>Installieren Sie node.js:  <a href="https://nodejs.org/">https://nodejs.org/</a></p>
+
+    <h2>Theorie</h2>
+    <p>Informationen über node.js gibt es unter  <a href="https://nodejs.org/api/" target="_blank">https://nodejs.org/api/</a>.</p>
+
+    <h2>Debuggen</h2>
+    <p>Server Code kann mit Webstrom ohne Problem debugged werden. Nutzen Sie dieses Feature, wenn Sie nicht mehr weiterkommen! Mehr Information dazu: <a href="https://www.jetbrains.com/webstorm/help/debugging-javascript.html" target="_blank">https://www.jetbrains.com/webstorm/help/debugging-javascript.html</a>.</p>
+    <p><img data-type="icon-difficult" src="../../resources/mind.svg" />  Alternative ohne Webstorm: <a href="https://github.com/node-inspector/node-inspector" target="_blank">https://github.com/node-inspector/node-inspector</a>.</p>
+
+    <h2>Aufgabenbeschreibung</h2>
+    <p class="description">Lösen Sie die folgenden Aufgaben.</p>
+
+    <h2>Aufgabe A - node - console</h2>
+    <ol>
+        <li>Öffnen Sie eine Console (unter Windows: cmd.exe).</li>
+		<li>Starten Sie node innerhalb der console: node.exe</li>		
+        <li>
+            Beantworten Sie folgende Fragen:
+            <ul>
+                <li>Sind typische globale Objekte von JavaScript wie window, document, console vorhanden?</li>
+                <li>Lässt sich JavaScript wie gewohnt verwenden?</li>
+                <li>Wie verhält sich node.js, wenn man auf eine undefinierte Variable zugreift?</li>
+                <li>Wo werden globale Variablen abgelegt? z.B. var x = 10.</li>
+                <li>Wie können Sie eine echte globale Variable erstellen?</li>
+            </ul>       
+
+            <div class="solution">
+				<ul>
+					<li>window und document sind nur im browser vorhanden, console ist in node.js gegeben.</li>
+					<li>Ja</li>
+					<li>Exception</li>
+					<li>Im scope vom File. Node.js legt für jedes File einen eigenen Scope an.</li>
+					<li>global.x = 2</li>
+				</ul>        
+            </div>			
+		</li>		
+        <li>Beenden der Console mit CTRL + C.</li>		
+	</ol>
+
+	<h2>Aufgabe B - Hello World Server</h2>
+
+	<div class="solution">
+		<p>Siehe: Solution-UebungB.js</p>
+    </div>
+			
+
+    <h2>Aufgabe C - Hello World Server 2</h2>
+	
+	<div class="solution">
+		<p>Siehe: Solution-UebungC.js</p>
+    </div>		
+
+	<h2>Aufgabe D / E - Routing</h2>
+    <div class="solution">
+        <p>Siehe: Solution-UebungD_E.js</p>
+    </div>
+  </body>
+</html>

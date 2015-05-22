@@ -1,0 +1,18 @@
+/**
+Aufgabe A:
+    - console: ja; window,document: nein, nicht verfügbar
+  --> window und document geben ReferrenceError.
+    - Nein. Auch wenn einige Definitionen funktionieren, kann man nicht wie gewohnt Code schreiben.
+    - node.js wirft eine ReferenceError (z.B bei document etc.)
+        >   bei var niyazi; (1. Ausgabe nach Enter: undefined), und wenn man danach
+        >   niyazi aufruft, kommt wieder undefined.
+    - they are stored in the global object, which in browser is window, and on servers its global.
+        >   apparently each modules points to its own global object.(which I guess explains the scope
+            of variables limited within the modules. The file is usally the scope.
+    - mit exports.variableName = variableToExport;
+        >   var variableToAccess = require('./filename.js');
+        >   variableToAcces;
+        >   oder mit global.variableName = Type; <-- ist dieses hier.
+Aufgabe B:
+    -
+*/

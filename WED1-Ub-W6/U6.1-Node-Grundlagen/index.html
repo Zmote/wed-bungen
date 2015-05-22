@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Node JS</title>
+
+    <link rel="stylesheet" type="text/css" href="../../resources/documentStyle.css">
+  </head>
+  <body>
+    <h1>
+        <a class="backlink" href="../WED1-FS2015-U6-Node.html">⇦</a>
+        Node Basics Übung
+    </h1>
+
+    <h2>Installation</h2>
+    <p>Installieren Sie Webstorm. </p>
+	<p>Installieren Sie node.js:  <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></p>
+
+    <h2>Theorie</h2>
+    <p>Informationen über node.js finden Sie unter  <a href="https://nodejs.org/api/" target="_blank">https://nodejs.org/api/</a>.</p>
+
+    <h2>Debuggen</h2>
+    <p>
+		Server Code kann mit Webstrom problemlos debugged werden. Nutzen Sie dieses Feature, wenn Sie nicht mehr weiterkommen! Mehr Information dazu: <a href="https://www.jetbrains.com/webstorm/help/debugging-javascript.html" target="_blank">https://www.jetbrains.com/webstorm/help/debugging-javascript.html</a>.
+		<br /><strong>Tipp:</strong> Nach der erfolgten node.js Installation können Sie das Debugging wie folgt starten. Klicken Sie im Webstorm in der Project-Ansicht mit der rechte Maustaste auf Ihr JavaScript File (z.B. aufgabe1.js). Wählen Sie anschliessend <strong>Debug 'aufgabe1.js'</strong> um Ihr Script mit node.js auszuführen.
+    </p>
+    <p><img data-type="icon-difficult" src="../../resources/mind.svg" />  Alternative ohne Webstorm: <a href="https://github.com/node-inspector/node-inspector" target="_blank">https://github.com/node-inspector/node-inspector</a>.</p>
+
+    <h2>Aufgabenbeschreibung</h2>
+    <p class="description">Lösen Sie die folgenden Aufgaben.</p>
+
+    <h2>Aufgabe A - node - console</h2>
+    <ol>
+        <li>Öffnen Sie eine Console (unter Windows: cmd.exe).</li>
+		<li>Starten Sie node innerhalb der console: node.exe</li>		
+        <li>
+            Beantworten Sie folgende Fragen:
+            <ul>
+                <li>Sind typische globale Objekte von JavaScript wie window, document, console vorhanden?</li>
+                <li>Lässt sich JavaScript wie gewohnt verwenden?</li>
+                <li>Wie verhält sich node.js, wenn man auf eine undefinierte Variable zugreift?</li>
+                <li>Wo werden globale Variablen abgelegt? z.B. var x = 10.</li>
+                <li>Wie können Sie eine echte globale Variable erstellen?</li>
+            </ul>        
+		</li>		
+        <li>Beenden der Console mit CTRL + C.</li>
+	</ol>
+
+	<h2>Aufgabe B - Hello World Server</h2>
+
+	<p>Erstellen Sie einen Server, welcher immer "Hello World" ausgibt.</p>
+    <p>Nutzen Sie dafür <a href="https://nodejs.org/api/http.html" target="_blank"> https://nodejs.org/api/http.html</a></p>
+    <p>Starten Sie den Server mit der Console: node.exe [filename] oder via Webstorm.</p>
+
+    <h2>Aufgabe C - Hello World Server 2</h2>
+    <p>Erstellen Sie einen Server, welcher immer die angefragte URL ausgibt. z.B. http://localhost:3000/Test5105 sollte Ihr Server folgendes ausgeben: <strong>You requested /Test5105</strong>.</p>
+
+	<h2>Aufgabe D - Routing</h2>
+    <p>Schreiben Sie einen Server, welcher /number die Zahlen 0-50 ausgibt und unter /file ein File erstellt mit dem aktuellem Datum.</p>
+    <p>Mit 'fs' kann auf das File System zugegriffen werden: <a href="https://nodejs.org/api/fs.html" target="_blank">https://nodejs.org/api/fs.html</a></p>
+    <p>Bei der /number Route soll von und bis angeben werden z.B. /number?von=10&bis=50. Finden Sie die dafür geeignetste API-Funktionalität.</p>
+
+    <h2>Aufgabe E - Routing 2</h2>
+    <p>Ergänzen Sie den Server von Aufgabe D wie folgt:</p>
+    <p>Wenn "/ToSendHtml.html" angefragt wird, soll dessen HTML übertragen werden; dieselbe Funktionalität soll auch für das JavaScript File implementiert werden (ToSendJavaScript.js).</p>
+    <p>Informationen zum Response-Objekt finden Sie unter <a href=https://nodejs.org/api/http.html#http_class_http_serverresponse" target="_blank">https://nodejs.org/api/http.html#http_class_http_serverresponse</a></p>
+    <p>Eine Anfrage an "/ToSendHtml.html" kann so mit folgenden Schritten beantwortet werden:</p>
+    <ol>
+        <li>Laden Sie das HTML vom File-System mit 'fs'.</li>
+        <li>Schreiben Sie den richtigen Content-Type in das Response-Object: res.writeHeader(200, {"Content-Type": "text/html"}); </li>
+        <li>Schreiben Sie den den Inhalt des html's in das Response-Object: res.write(html) </li>
+        <li>Beenden Sie die Response: res.end();</li>
+        <li>Verwenden Sie dieselbe Vorgehensweise für "/ToSendJavaScript.js"</li>
+    </ol>
+  </body>
+</html>

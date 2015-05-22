@@ -1,0 +1,5 @@
+(function solution1c(i) { 	
+	i = (typeof i == 'undefined' ?  0 : i);
+ 	console.log(i++); 
+ 	i > 50 || solution1c(i); 
+})(); 

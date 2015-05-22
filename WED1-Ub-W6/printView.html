@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>WED1 Übung 06: Druckansicht</title>
+
+		<link rel="stylesheet" type="text/css" href="../resources/documentStyle.css">
+		<style>
+			iframe { margin-left: -1rem; margin-right: -1rem; border: none; width: 100%; }
+		</style>
+		<script>
+		
+			window.onload = function() {
+				var iframeSet = document.getElementsByTagName('iframe');
+				[].slice.call(iframeSet).forEach(function(element) {
+					element.height = (element.contentWindow.document.body.scrollHeight+50) + 'px';
+				});
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="screenOnly">
+			<h1>Druckansicht: Hinweise</h1>
+			<ul>
+				<li>Stellen Sie die Papiergrösse auf A4 Hochformat ein.</li>
+				<li>Stellen Sie die Seitenränder auf 1.5cm, links auf 2.5cm</li>
+				<li>Aktivieren Sie im Druckdialog das Drucken von Hintergrundfarben und Bilder.</li>
+				<li>Aktivieren Sie die Option &quot;Skalierung ignorieren und auf Seitengrösse anpassen&quot;</li>
+				<li>Verwenden Sie Firefox oder Internet Explorer der neusten Generation fürs Drucken.</li>
+			</ul>
+			<img src="../resources/printDialog.png"/>
+		</div>
+		<iframe src="WED1-FS2015-U6-Node.html"></iframe>
+		<iframe src="U6.1-Node-Grundlagen/index.html"></iframe>
+	</body>
+</html>
