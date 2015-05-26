@@ -1,7 +1,6 @@
 /**
  * Created by Zmote on 23.05.2015.
  */
-// TODO: Find a way to put the /path automatically.
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
@@ -32,9 +31,37 @@ http.createServer(function(req,res){
         return;
     }
 
+    if(url_parts.pathname == '/ToSendHtml.html'){
+        var content;
+        fs.readFile('ToSendHtml.html', 'utf-8', function(err,data){
+            if(err){
+                throw error;
+            }
+            content = data;
+            res.writeHead(200,{'Content-Type':'text/html'});
+            res.write(content);
+            res.end();
+        });
+        return;
+    }
+
+    if(url_parts.pathname == '/ToSendJavaScript.js'){
+        var content;
+        fs.readFile('ToSendJavaScript.js', 'utf-8', function(err,data){
+            if(err){
+                throw error;
+            }
+            content = data;
+            res.writeHead(200,{'Content-Type':'text/javascript'});
+            res.write(content);
+            res.end();
+        });
+        return;
+    }
+
     if(url_parts.pathname == "/"){
         res.writeHead(200, {'Content-Type': 'text/plain'});
-        res.end('Following paths are also available: \n/number\n/file');
+        res.end('Following paths are also available: \n/number\n/file\n/ToSendHtml.html\n/ToSendJavaScript.js');
         return;
     }
 
